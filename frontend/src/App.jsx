@@ -2,6 +2,15 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
+import Login from './pages/Login';
+import Home from './pages/Home';
+import AuthorityDashboard from './pages/AuthorityDashboard';
+import AdminDashboard from './pages/AdminDashboard';
+import NotFound from './pages/NotFound';
+import Profile from './pages/Profile';
+import Register from './pages/Register';
+import ReportIssue from './pages/ReportIssue';
+import TrackIssue from './pages/TrackIssue';
 import './App.css'
 
 function App() {

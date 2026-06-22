@@ -1,0 +1,140 @@
+.citizen-dashboard {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f4f7fc;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-header {
+  margin-bottom: 25px;
+}
+
+.dashboard-header h1 {
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+.dashboard-header p {
+  color: #666;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h2 {
+  color: #2563eb;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.stat-card p {
+  color: #666;
+}
+
+.quick-actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.quick-actions button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.quick-actions button:hover {
+  background: #1d4ed8;
+}
+
+.complaints-section {
+  margin-top: 35px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.complaints-section h2 {
+  color: #1e3a8a;
+  margin-bottom: 15px;
+}
+
+.complaints-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.complaints-section th {
+  border-bottom: 2px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  background: #f8fafc;
+}
+
+.complaints-section td {
+  border-bottom: 1px solid #ddd;
+  padding: 12px;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: white;
+}
+
+.pending {
+  background: #ef4444;
+}
+
+.in-progress {
+  background: #f59e0b;
+}
+
+.resolved {
+  background: #22c55e;
+}
+
+@media (max-width: 768px) {
+  .citizen-dashboard {
+    padding: 15px;
+  }
+
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-actions {
+    flex-direction: column;
+  }
+
+  .quick-actions button {
+    width: 100%;
+  }
+
+  .complaints-section {
+    overflow-x: auto;
+  }
+
+  .complaints-section table {
+    min-width: 600px;
+  }
+}
