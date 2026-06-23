@@ -1,162 +1,268 @@
 import "./Home.css";
+import { useNavigate } from "react-router-dom";
+import {
+  FaMapMarkedAlt,
+  FaRobot,
+  FaShieldAlt,
+  FaChartLine,
+  FaArrowRight,
+  FaUserCheck,
+} from "react-icons/fa";
+
+const Home = () => {
+
+  const navigate = useNavigate();
+  return (
+    <div className="home">
+
+      {/* ================= NAVBAR ================= */}
+      <nav className="navbar">
+
+        <div className="logo">
+          <FaMapMarkedAlt className="logo-icon" />
+          <div>
+            <h2>Smart Urban</h2>
+            <p>Geo-Tagged Monitoring</p>
+          </div>
+        </div>
+
+       <ul className="nav-links">
+  <li>Features</li>
+  <li>Workflow</li>
+  <li>Impact</li>
+  <li>Contact</li>
+</ul>
+
+        <div className="nav-buttons">
+ <button
+  className="login-btn"
+  onClick={() => navigate("/login")}
+>
+  Login
+</button>
+
+  <button
+  className="signup-btn"
+  onClick={() => navigate("/register")}
+>
+  Sign Up
+</button>
+</div>
+
+      </nav>
+
+      {/* ================= HERO ================= */}
+      <section className="hero">
 
-function Home() {
-  return (
-    <div className="home">
+        <div className="hero-left">
 
-      {/* Navbar */}
+          <span className="badge">AI + Geo Intelligence</span>
 
-      <nav className="navbar">
+          <h1>
+            Smart City <br />
+            Issue Monitoring
+          </h1>
 
-        <div className="logo">
+          <p>
+            Detect. Track. Resolve. Faster urban issue management using AI and Geo-Tagging.
+          </p>
 
-          <span className="logo-icon">🌍</span>
+<div className="hero-actions">
 
-          <h2>Smart Urban AI</h2>
+  <button
+  className="primary-btn"
+  onClick={() => navigate("/report")}
+>
+  Report Issue
+  <FaArrowRight />
+</button>
+
+  <button
+  className="track-btn"
+  onClick={() => navigate("/track")}
+>
+  Track Issue
+</button>
 
-        </div>
+</div>
 
-        <ul className="nav-links">
+          <div className="stats">
 
-          <li><a href="/">Home</a></li>
+            <div className="stat">
+              <h3>95%</h3>
+              <p>Accuracy</p>
+            </div>
 
-          <li><a href="/">Features</a></li>
+            <div className="stat">
+              <h3>24/7</h3>
+              <p>Active</p>
+            </div>
 
-          <li><a href="/">Services</a></li>
+            <div className="stat">
+              <h3>Real-time</h3>
+              <p>Tracking</p>
+            </div>
 
-          <li><a href="/">Contact</a></li>
+          </div>
 
-        </ul>
+        </div>
 
-        <div className="nav-buttons">
+        <div className="hero-right">
 
-          <button className="login-btn">
-            Login
-          </button>
+          <div className="card">
 
-          <button className="register-btn">
-            Register
-          </button>
+            <div className="card-header">
+              <FaRobot />
+              <h3>AI Monitoring</h3>
+            </div>
 
-        </div>
+            <p>Automatic issue classification and routing</p>
 
-      </nav>
+            <div className="card-grid">
 
+              <div className="mini-card">
+                <FaShieldAlt />
+                <span>Secure</span>
+              </div>
 
-      {/* Hero Section */}
+              <div className="mini-card">
+                <FaMapMarkedAlt />
+                <span>Geo</span>
+              </div>
 
-      <section className="hero">
+              <div className="mini-card">
+                <FaChartLine />
+                <span>Live</span>
+              </div>
 
-        <div className="hero-left">
+              <div className="mini-card">
+                <FaUserCheck />
+                <span>Assigned</span>
+              </div>
 
-          <span className="badge">
+            </div>
 
-            AI Powered Smart City Platform
+          </div>
 
-          </span>
+        </div>
 
-          <h1>
+      </section>
 
-            Geo-Tagged Smart Urban Infrastructure Monitoring System
+      {/* ================= PART 2 CONTINUES HERE ================= */}
+              {/* ================= FEATURES SECTION ================= */}
 
-          </h1>
+      <section className="features">
 
-          <p>
+        <h2>Core Features</h2>
+        <p>AI powered urban management system</p>
 
-            Report waste, potholes, drainage issues, water leakage,
-            streetlight failures and other civic problems using
-            AI-powered image analysis and GPS-enabled issue tracking.
+        <div className="feature-grid">
 
-            Empower citizens and help government departments
-            resolve issues faster through an intelligent dashboard.
+          <div className="feature-card">
+            <h3>AI Classification</h3>
+            <p>Auto detect issue type</p>
+          </div>
 
-          </p>
+          <div className="feature-card">
+            <h3>Geo Tagging</h3>
+            <p>Capture exact location</p>
+          </div>
 
-          <div className="hero-buttons">
+          <div className="feature-card">
+            <h3>Authority Mapping</h3>
+            <p>Assign to department</p>
+          </div>
 
-            <button className="primary-btn">
+          <div className="feature-card">
+            <h3>Live Tracking</h3>
+            <p>Track resolution status</p>
+          </div>
 
-              Report an Issue
+        </div>
 
-            </button>
+      </section>
 
-            <button className="secondary-btn">
 
-              Learn More
+      {/* ================= WORKFLOW SECTION ================= */}
 
-            </button>
+      <section className="workflow">
 
-          </div>
+        <h2>How It Works</h2>
 
-        </div>
+        <div className="steps">
 
-        <div className="hero-right">
+          <div className="step">
+            <span>1</span>
+            <p>Report Issue</p>
+          </div>
 
-          <div className="circle one"></div>
+          <div className="step">
+            <span>2</span>
+            <p>AI Detects</p>
+          </div>
 
-          <div className="circle two"></div>
+          <div className="step">
+            <span>3</span>
+            <p>Assign Authority</p>
+          </div>
 
-          <div className="circle three"></div>
+          <div className="step">
+            <span>4</span>
+            <p>Resolve</p>
+          </div>
 
-          <div className="dashboard-card">
+        </div>
 
-            <h3>Live Monitoring</h3>
+      </section>
 
-            <p>✔ AI Issue Detection</p>
 
-            <p>✔ GPS Mapping</p>
+      {/* ================= IMPACT SECTION ================= */}
 
-            <p>✔ Complaint Tracking</p>
+      <section className="impact">
 
-            <p>✔ Authority Dashboard</p>
+        <h2>Project Impact</h2>
 
-          </div>
+        <div className="impact-grid">
 
-        </div>
+          <div className="impact-box">
+            <h3>1000+</h3>
+            <p>Issues Reported</p>
+          </div>
 
-      </section>
+          <div className="impact-box">
+            <h3>850+</h3>
+            <p>Resolved</p>
+          </div>
 
+          <div className="impact-box">
+            <h3>50+</h3>
+            <p>Departments</p>
+          </div>
 
-      {/* Statistics */}
+          <div className="impact-box">
+            <h3>98%</h3>
+            <p>Satisfaction</p>
+          </div>
 
-      <section className="stats">
+        </div>
 
-        <div className="stat-card">
+      </section>
 
-          <h2>10K+</h2>
 
-          <p>Citizens Connected</p>
+      {/* ================= FOOTER ================= */}
 
-        </div>
+      <footer className="footer">
 
-        <div className="stat-card">
+        <h3>Smart Urban System</h3>
+        <p>AI + Geo Intelligence for better cities</p>
 
-          <h2>95%</h2>
+      </footer>
 
-          <p>AI Detection Accuracy</p>
-
-        </div>
-
-        <div className="stat-card">
-
-          <h2>24×7</h2>
-
-          <p>Issue Monitoring</p>
-
-        </div>
-
-        <div className="stat-card">
-
-          <h2>100+</h2>
-
-          <p>Government Departments</p>
-
-        </div>
-
-      </section>
-
-    </div>
-  );
-}
+    </div>
+  );
+};
 
 export default Home;
+  
+
+
